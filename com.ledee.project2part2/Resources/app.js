@@ -1,5 +1,5 @@
 var beginningWindow = Ti.UI.createWindow({
-	backgroundColor : "blue",
+	backgroundColor : "black",
 	fullscreen : true
 });
 
@@ -18,7 +18,7 @@ var tableView = Ti.UI.createLabel({
 
 });
 var listView = Ti.UI.createLabel({
-	text : "list view",
+	text : "List view",
 	backgroundColor : "#fff",
 	left : 0,
 	right : 0,
@@ -31,20 +31,25 @@ var listView = Ti.UI.createLabel({
 	textAlign : "center"
 });
 
-var loadNow = function() {
+/*var loadNow = function() {
 
 	var loadFile = require("Newapp");
 	//loadFile.window();
-};
-var loadThis = function() {
+};*/
+/*var loadThis = function() {
 
 	var loadFile = require("newapp2");
 	//loadFile.window();
-};
+};*/
 
-listView.addEventListener("click", loadNow);
-tableView.addEventListener("click", loadThis);
+//listView.addEventListener("click", loadNow);
+listView.addEventListener("click", function() {
+	var loadFile = Ti.include("Newapp.js");
+});
 
+tableView.addEventListener("click", function() {
+	var loadFile = Ti.include("Newapp2.js");
+});
 beginningWindow.add(listView);
 beginningWindow.add(tableView);
 beginningWindow.open();

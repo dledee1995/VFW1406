@@ -2,7 +2,7 @@ var loadFile = require("data");
 
 var openDetail = function() {
 	var detailWindow = Ti.UI.createWindow({
-		backgroundColor : "blue",
+		backgroundColor : "black",
 		fullscreen : true,
 		title : this.title
 	});
