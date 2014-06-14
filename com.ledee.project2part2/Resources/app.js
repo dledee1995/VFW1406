@@ -18,7 +18,7 @@ var tableView = Ti.UI.createLabel({
 
 });
 var listView = Ti.UI.createLabel({
-	text : "List view",
+	text : "List View",
 	backgroundColor : "#fff",
 	left : 0,
 	right : 0,

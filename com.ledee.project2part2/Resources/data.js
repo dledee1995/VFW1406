@@ -5,8 +5,8 @@ var teams = {
 		"headTitle": "NBA teams",
 		"footTitle" : "NBA Footer",
 		"teams": [
-	{Title : "Heat",desc: "They are the miami Heat."}, 
-	{Title : "Spurs",desc: "They are the San antonio Spurs"},
+	{Title : "Heat",desc: "They are the Miami Heat."}, 
+	{Title : "Spurs",desc: "They are the San Antonio Spurs"},
 	{Title : "Lakers",desc: "They are the Los Angeles Lakers"}
 	],
 	},

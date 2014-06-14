@@ -1,14 +1,14 @@
 var loadFile = require("data");
 
-var openDetail = function() {
+var openDetail = function(D) {
 	var detailWindow = Ti.UI.createWindow({
 		backgroundColor : "black",
 		fullscreen : true,
-		title : this.title
+		title : D.title
 	});
 
 	var detailText = Ti.UI.createLabel({
-		text : this.detail,
+		text : D.detail,
 		top : 100,
 		color : "#fff"
 
@@ -66,10 +66,15 @@ for (var n in loadFile.data) {
 			detail : loadFile.data[n].teams[i].desc
 		});
 		tvs.add(row);
-		row.addEventListener("click", openDetail);
+		//row.addEventListener("click", openDetail);
 	}
 	tableSections.push(tvs);
 }
+table.addEventListener("click", function(listing){
+	openDetail(listing.source);
+	
+	
+});
 
 // rich note: added close event listener
 var mainClose = function (){
